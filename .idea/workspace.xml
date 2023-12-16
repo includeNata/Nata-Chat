@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8817b4a8-0cae-46e2-94f8-0ad048732e2e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messagingstompwebsocket/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messagingstompwebsocket/entities/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messagingstompwebsocket/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messagingstompwebsocket/entities/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +61,7 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.MessagingStompWebsocketApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "belga",
     "ignore.virus.scanning.warn.message": "true",
@@ -68,6 +72,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "spring.configuration.checksum": "aca5dbf72607b70944e0e50aca2be244",
     "vue.rearranger.settings.migration": "true"
   }
@@ -116,6 +121,7 @@
       <workItem from="1702752958293" duration="1053000" />
       <workItem from="1702757424240" duration="60000" />
       <workItem from="1702760160466" duration="78000" />
+      <workItem from="1702760957174" duration="2839000" />
     </task>
     <servers />
   </component>
@@ -127,5 +133,16 @@
     <option featureType="dependencySupport" implementationName="executable:docker" />
     <option featureType="dependencySupport" implementationName="javascript:npm:vite" />
     <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
