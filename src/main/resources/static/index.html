@@ -30,35 +30,50 @@
                     </span>
                 </header>
 
-                <form action="" class="w-4/5 h-auto">
+                <form action="" class="w-8/12 h-auto flex flex-col gap-6">
                     <div class="w-full h-auto flex flex-col gap-2">
                         <span class="text-base font-bold">Nome</span>
 
-                        <div class="w-full h-auto border border-[#0AA6FB] rounded-lg">
-                            <input 
-                                name="name" 
-                                id="name" 
-                                type="text" 
-                                class="w-full h-full outline-none rounded-lg px-4 py-2"
-                                placeholder="Digite seu Nome"
-                                required
-                            >
-                        </div>
+                        <input 
+                            name="name" 
+                            id="name" 
+                            type="text" 
+                            class="w-full h-full border-2 border-[#0AA6FB] outline-none rounded-lg text-black px-2 py-2"
+                            placeholder="Digite seu nome"
+                            required
+                        >
                     </div>
 
                     <div class="w-full h-auto flex flex-col gap-2">
                         <span class="text-base font-bold">E-mail</span>
 
-                        <div class="w-full h-auto border border-[#0AA6FB] rounded-lg">
-                            <input 
-                                name="email" 
-                                id="email" 
-                                type="email" 
-                                class="w-full h-full outline-none rounded-lg px-4 py-2"
-                                placeholder="Digite seu Nome"
-                                required
-                            >
-                        </div>
+                        <input 
+                            name="email" 
+                            id="email" 
+                            type="email" 
+                            class="w-full h-full border-2 border-[#0AA6FB] outline-none rounded-lg text-black px-4 py-2"
+                            placeholder="Digite seu e-mail"
+                            required
+                        >
+                    </div>
+
+                    <div class="w-full h-auto flex flex-col gap-2">
+                        <span class="text-base font-bold">Senha</span>
+
+                        <input 
+                            name="password" 
+                            id="password" 
+                            type="password" 
+                            class="w-full h-full border-2 border-[#0AA6FB] outline-none rounded-lg text-black px-2 py-2"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+                    </div>
+
+                    <div class="w-full h-auto flex items-center justify-start">
+                        <button class="w-auto h-auto border border border-[#a9a8e8] text-[#a9a8e8] px-8 py-2 rounded-lg hover:bg-[#a9a8e8] hover:text-white transition-all">
+                            Cadastrar
+                        </button>
                     </div>
                 </form>
 
