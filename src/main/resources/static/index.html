@@ -6,31 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./main.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/142ae13938.js" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
 </head>
-    <body>
-        <aside class="w-[40%] h-screen flex items-center justify-center fixed bg-[#5E5BE5]">
-            <div class="w-[80%] h-[85%] flex flex-col items-end justify-between pl-8 mr-auto">
-                <h2 class="text-4xl text-white leading-[3rem]">
-                    O Nata Chat permite que você se comunique  de forma fácil, rápida e divertida.
-                </h1>
-
+    <body class="flex">
+        <aside class="w-[50%] h-screen flex items-center justify-center bg-[#5E5BE5]">
+            <div class="w-[80%] h-full flex flex-col items-center justify-center pl-8 mr-auto">
                 <img src="./assets/icon.svg" alt="" class="w-[75%] h-[50%] icon-login mx-auto">
             </div>
         </aside>
 
-        <main class="w-[65%] h-screen flex items-center justify-center ml-auto rounded-l-2xl bg-[#333] z-50 relative">
+        <main class="w-[50%] h-screen flex items-center justify-center ml-auto bg-[#333] z-50 relative">
             <secton class="w-[80%] h-[85%] text-white flex flex-col items-start justify-between">
-                <header class="w-full h-auto flex flex-col items-start justify-start gap-4 py-2">
+                <header class="w-full h-auto flex flex-row items-center justify-start gap-4 py-2">
                     <h1 class="text-5xl font-bold">Registre-se</h1>
-                    <span class="text-xl">Já tem conta? 
-                        <a href="" class="text-[#0AA6FB] hover:text-[#a9a8e8] cursor-pointer transition-colors">
-                            Vá para o Login
-                        </a>
-                    </span>
                 </header>
 
-                <form action="" class="w-8/12 h-auto flex flex-col gap-6">
+                <form action="" class="w-full h-auto flex flex-col gap-6">
                     <div class="w-full h-auto flex flex-col gap-2">
                         <span class="text-base font-bold">Nome</span>
 
@@ -53,6 +45,7 @@
                             type="email" 
                             class="w-full h-full border-2 border-[#0AA6FB] outline-none rounded-lg text-black px-4 py-2"
                             placeholder="Digite seu e-mail"
+                            autocomplete="username"
                             required
                         >
                     </div>
@@ -66,18 +59,49 @@
                             type="password" 
                             class="w-full h-full border-2 border-[#0AA6FB] outline-none rounded-lg text-black px-2 py-2"
                             placeholder="Digite sua senha"
+                            autocomplete="current-password"
                             required
                         >
                     </div>
 
-                    <div class="w-full h-auto flex items-center justify-start">
-                        <button class="w-auto h-auto border border border-[#a9a8e8] text-[#a9a8e8] px-8 py-2 rounded-lg hover:bg-[#a9a8e8] hover:text-white transition-all">
-                            Cadastrar
-                        </button>
+                    <div class="w-full h-auto flex flex-col items-start justify-between gap-4">
+                        <div class="w-full h-auto flex items-center justify-start">
+                            <button class="w-full h-auto border border border-[#21E6A1] text-[#21E6A1] px-8 py-2 rounded-lg hover:bg-[#21E6A1] hover:text-white transition-all">
+                                Cadastrar
+                            </button>
+                        </div>
+
+                        <div class="w-full flex items-center justify-start">
+                            <span class="text-base">Já tem conta? 
+                                <a href="" class="text-[#0AA6FB] hover:text-[#21E6A1] cursor-pointer transition-colors">
+                                    Vá para o Login
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-auto flex flex-col gap-6">
+                        <div class="w-full h-auto flex items-center gap-4">
+                            <div class="w-full h-[2px] bg-white"></div>
+                            <div class="font-lg font-bold font-white">//</div>
+                            <div class="w-full h-[2px] bg-white"></div>
+                        </div>
+
+                        <div class="w-full flex items-center justify-between mx-auto">
+                            <div class="w-auto h-full text-white border-[1px] py-2 px-12 rounded-xl hover:border-[#4285F4] hover:text-[#4285F4] cursor-pointer text-black dark:text-white">
+                                <i class="fa-brands text-lg fa-google"></i>
+                            </div>
+              
+                            <div class="w-min h-full text-white border-[1px] py-2 px-12 rounded-xl hover:border-[#4285F4] hover:text-[#4285F4] cursor-pointer text-black dark:text-white">
+                                <i class="fa-brands text-lg fa-linkedin"></i>
+                            </div>
+              
+                            <div class="w-min h-full text-white border-[1px] py-2 px-12 rounded-xl hover:border-[#4285F4] hover:text-[#4285F4] cursor-pointer text-black dark:text-white">
+                                <i class="fa-brands text-lg fa-instagram"></i>
+                            </div>
+                        </div>
                     </div>
                 </form>
-
-                <div class=""></div>
             </secton>
         </main>
     </body>
