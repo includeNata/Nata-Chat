@@ -1,18 +1,24 @@
 package com.example.messagingstompwebsocket.entities;
 
-import javax.xml.crypto.Data;
+import jakarta.persistence.*;
+import java.util.Date;
 import java.util.Objects;
-
+@Entity
+@Table (name = "Mensagem")
 public class Message {
+    @Id
+    @GeneratedValue
     private int id;
+    @ManyToOne
+    @JoinColumn(name = "id_user")
     private User user;
     private String message;
-    private Data date;
+    private Date date;
 
     public Message() {
     }
 
-    public Message(int id, User user, String message, Data date) {
+    public Message(int id, User user, String message, Date date) {
         this.id = id;
         this.user = user;
         this.message = message;
@@ -43,11 +49,11 @@ public class Message {
         this.message = message;
     }
 
-    public Data getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(Data date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

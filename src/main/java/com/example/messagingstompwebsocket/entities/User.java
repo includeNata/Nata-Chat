@@ -1,13 +1,19 @@
 package com.example.messagingstompwebsocket.entities;
 
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.Objects;
+import jakarta.persistence.*;
 
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+
+@Entity
+@Table (name = "Usuario")
 public class User {
 
-
+    @Id
+    @GeneratedValue
     private int id;
     private String name;
     private String password;
@@ -16,7 +22,8 @@ public class User {
     private String status;
     private Date date;
     private String foto;
-
+    @OneToMany(mappedBy = "message")
+    private Set<Message> message;
     public User() {
     }
 
