@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Hello WebSocket</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="/main.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+    <title>Nata Chat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./main.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="/app.js"></script>
 </head>
     <body>
-        <h1>Hello World!</h1>
+        <aside class="w-[40%] h-screen flex items-center justify-center fixed bg-[#5E5BE5]">
+            <div class="w-[80%] h-[85%] flex flex-col items-end justify-between pl-8 mr-auto">
+                <h2 class="text-4xl text-white leading-[3rem]">
+                    O Nata Chat permite que você se comunique  de forma fácil, rápida e divertida.
+                </h1>
+
+                <img src="./assets/icon.svg" alt="" class="w-[75%] h-[50%] icon-login mx-auto">
+            </div>
+        </aside>
+
+        <main class="w-[65%] h-screen flex items-center justify-center ml-auto rounded-l-2xl bg-[#333] z-50 relative">
+            <secton class="w-[80%] h-75% text-white">
+                <header class="w-full h-auto flex flex-col items-start justify-start gap-4 py-2">
+                    <h1 class="text-5xl font-bold">Registre-se</h1>
+                    <span class="text-xl">Já tem conta? 
+                        <a href="" class="text-[#0AA6FB] hover:text-[#a9a8e8] cursor-pointer transition-colors">
+                            Vá para o Login
+                        </a>
+                    </span>
+                </header>
+            </secton>
+        </main>
     </body>
 </html>

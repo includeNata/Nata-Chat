@@ -1,14 +1,15 @@
-body {
-    background-color: #f5f5f5;
+@keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+    }
 }
 
-#main-content {
-    max-width: 940px;
-    padding: 2em 3em;
-    margin: 0 auto 20px;
-    background-color: #fff;
-    border: 1px solid #e5e5e5;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+.icon-login{
+    -webkit-animation: slide-bottom 1s ease-in-out infinite alternate ;
+    animation: slide-bottom 1s ease-in-out infinite alternate ;
 }
