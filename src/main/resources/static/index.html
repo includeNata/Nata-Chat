@@ -21,7 +21,7 @@
                     <h1 class="text-5xl font-bold">Login</h1>
                 </header>
 
-                <form action="" class="w-full h-auto flex flex-col gap-6">
+                <form class="w-full h-auto flex flex-col gap-6" onsubmit="submitLogin(event)">
                     <div class="w-full h-auto flex flex-col gap-2">
                         <span class="text-base font-bold">E-mail</span>
 
@@ -52,7 +52,7 @@
 
                     <div class="w-full h-auto flex flex-col items-start justify-between gap-4">
                         <div class="w-full h-auto flex items-center justify-start">
-                            <button class="w-full h-auto border border border-[#21E6A1] text-[#21E6A1] px-8 py-2 rounded-lg hover:bg-[#21E6A1] hover:text-white transition-all">
+                            <button type="submit" class="w-full h-auto border border border-[#21E6A1] text-[#21E6A1] px-8 py-2 rounded-lg hover:bg-[#21E6A1] hover:text-white transition-all">
                                 Entrar
                             </button>
                         </div>

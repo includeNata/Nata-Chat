@@ -1,34 +1,47 @@
-let pages = false;
-let animationClass = "";
+
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
 const loginElements = document.querySelectorAll("#login");
 const registerElements = document.querySelectorAll("#register");
+let pages = false;
+let animationClass = "";
 
 function handleTogglePages() {
     pages = !pages;
-
     if (pages) {
-        loginElements.forEach(el => {
-            el.style.display = "none";
-        })
-        registerElements.forEach(el => {
-            el.style.display = "flex";
-        })
-
+        loginElements.forEach(el => el.style.display = "none");
+        registerElements.forEach(el => el.style.display = "flex");
         return;
     }
 
-    loginElements.forEach((el) => {
-        el.style.display = "flex";
-    })
-    registerElements.forEach((el) => {
-        el.style.display = "none";
-    })
+    loginElements.forEach((el) => el.style.display = "flex");
+    registerElements.forEach((el) => el.style.display = "none");
+}
+
+function submitLogin(event){
+    event.preventDefault();
+
+    if(checkEmail(email) && password.value.length > 3){
+        alert("Login feito com sucesso!")
+    }
+    else{
+        alert("Email não válido")
+    }
+}
+
+function checkEmail(input) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   
+    if(re.test(input.value)) {
+        return true;
+    }  
+    
+    return false;
 }
 
 window.onload = () => {
-    registerElements.forEach((el) => {
-        el.style.display = "none";
-    })
+    registerElements.forEach((el) => el.style.display = "none")
 }
 
 const stompClient = new StompJs.Client({
@@ -91,4 +104,3 @@ $(function () {
     $( "#disconnect" ).click(() => disconnect());
     $( "#send" ).click(() => sendName());
 });
-
