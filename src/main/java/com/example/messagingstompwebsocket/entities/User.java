@@ -114,4 +114,6 @@ public class User {
         return Objects.hash(getId(), getName(), getPassword(), getEmail(), getNickname(), getStatus(), getDate(), getFoto());
     }
 
+
+
 }
