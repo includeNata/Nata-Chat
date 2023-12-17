@@ -3,9 +3,10 @@ let animationClass = "";
 const loginElements = document.querySelectorAll("#login");
 const registerElements = document.querySelectorAll("#register");
 
-function handleTogglePages(){
+function handleTogglePages() {
     pages = !pages;
-    if(pages){
+
+    if (pages) {
         loginElements.forEach(el => {
             el.style.display = "none";
         })
@@ -16,16 +17,16 @@ function handleTogglePages(){
         return;
     }
 
-    loginElements.forEach(el => {
+    loginElements.forEach((el) => {
         el.style.display = "flex";
     })
-    registerElements.forEach(el => {
+    registerElements.forEach((el) => {
         el.style.display = "none";
     })
 }
 
 window.onload = () => {
-    registerElements.forEach(el => {
+    registerElements.forEach((el) => {
         el.style.display = "none";
     })
 }
