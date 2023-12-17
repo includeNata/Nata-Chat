@@ -1,3 +1,35 @@
+let pages = false;
+let animationClass = "";
+const loginElements = document.querySelectorAll("#login");
+const registerElements = document.querySelectorAll("#register");
+
+function handleTogglePages(){
+    pages = !pages;
+    if(pages){
+        loginElements.forEach(el => {
+            el.style.display = "none";
+        })
+        registerElements.forEach(el => {
+            el.style.display = "flex";
+        })
+
+        return;
+    }
+
+    loginElements.forEach(el => {
+        el.style.display = "flex";
+    })
+    registerElements.forEach(el => {
+        el.style.display = "none";
+    })
+}
+
+window.onload = () => {
+    registerElements.forEach(el => {
+        el.style.display = "none";
+    })
+}
+
 const stompClient = new StompJs.Client({
     brokerURL: 'ws://localhost:8080/gs-guide-websocket'
 });
