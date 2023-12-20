@@ -21,7 +21,7 @@
                     <h1 class="text-5xl font-bold">Login</h1>
                 </header>
 
-                <form action="" class="w-full h-auto flex flex-col gap-6">
+                <form action="" class="w-full h-auto flex flex-col gap-6" id="formLogin">
                     <div class="w-full h-auto flex flex-col gap-2">
                         <span class="text-base font-bold">E-mail</span>
 
@@ -91,13 +91,13 @@
             </secton>
         </main>
 
-        <main class="w-[50%] h-screen flex items-center justify-center bg-[#333] z-50 relative" id="register">
-            <secton class="w-[80%] h-[85%] text-white flex flex-col items-start justify-between mx-auto">
+        <main class="w-[50%] h-screen flex items-center justify-center bg-[#333] z-50 relative hidden" id="register">
+            <secton class="w-[80%] h-[90%] text-white flex flex-col items-start justify-between mx-auto">
                 <header class="w-full h-auto flex flex-row items-center justify-start gap-4 py-2">
                     <h1 class="text-5xl font-bold">Registre-se</h1>
                 </header>
 
-                <form action="" class="w-full h-auto flex flex-col gap-6">
+                <form action="" class="w-full h-auto flex flex-col gap-6" id="formRegister">
                     <div class="w-full h-auto flex flex-col gap-2">
                         <span class="text-base font-bold">Nome</span>
 
@@ -121,6 +121,22 @@
                             class="w-full h-full border-2 border-[#0AA6FB] outline-none rounded-lg text-black px-4 py-2"
                             placeholder="Digite seu e-mail"
                             autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div class="w-full h-auto flex flex-col gap-2">
+                        <span class="text-base font-bold">Número do celular</span>
+
+                        <input 
+                            name="tel" 
+                            id="tel" 
+                            type="tel" 
+                            class="w-full h-full border-2 border-[#0AA6FB] outline-none rounded-lg text-black px-4 py-2"
+                            placeholder="Digite seu número"
+                            autocomplete="tel"
+                            maxlength="15"
+                            onkeyup="handleTelt(this)"
                             required
                         >
                     </div>
@@ -180,12 +196,20 @@
             </secton>
         </main>
 
-        <aside class="w-[50%] h-screen flex items-center justify-center bg-[#5E5BE5]" id="register">
+        <aside class="w-[50%] h-screen flex items-center justify-center bg-[#5E5BE5] hidden" id="register">
             <div class="w-[80%] h-full flex flex-col items-center justify-center pl-8 mr-auto">
                 <img src="./assets/icon.svg" alt="" class="w-[75%] h-[50%] icon-login mx-auto">
             </div>
         </aside>
 
+        <div 
+            class="w-auto h-14 hidden flex-row items-center justify-start gap-3 bg-white rounded-lg absolute bottom-2 left-2 px-4 cursor-pointer z-50 after:block after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:rounded-b-full"
+            id="toast"
+        >
+            <div class="w-5 h-5 flex items-center justify-center rounded-full" id="toast-icon"></div>
+
+            <span class="font-bold text-lg" id="toast-text"></span>
+        </div>
         <script src="./app.js"></script>
     </body>
 </html>
