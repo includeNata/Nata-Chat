@@ -3,6 +3,7 @@ package com.example.messagingstompwebsocket.services;
 import com.example.messagingstompwebsocket.entities.User;
 import com.example.messagingstompwebsocket.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,11 +19,14 @@ public class UserServices {
     }
 
     public User findById (Integer id){
+
         return userRepository.findById(id).get();
 
     }
 
     public User create(User user){
+        String hash = BCrypt.hashpw(user.getPassword(),BCrypt.gensalt());
+        user.setPassword(hash);
         return userRepository.save(user);
     }
 
