@@ -1,13 +1,13 @@
 package entities;
 
 import jakarta.persistence.*;
-
+import Enum.RoleUser;
 import java.util.Date;
 import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table (name = "Usuario")
+@Table (name = "user")
 public class User {
 
     @Id
@@ -22,10 +22,12 @@ public class User {
     private String foto;
     @OneToMany(mappedBy = "message")
     private Set<Message> message;
+
+    private RoleUser roleUser;
     public User() {
     }
 
-    public User(int id, String name, String password, String email, String nickname, String status, Date date, String foto) {
+    public User(int id, String name, String password, String email, String nickname, String status, Date date, String foto, Set<Message> message, RoleUser roleUser) {
         this.id = id;
         this.name = name;
         this.password = password;
@@ -34,6 +36,8 @@ public class User {
         this.status = status;
         this.date = date;
         this.foto = foto;
+        this.message = message;
+        this.roleUser = roleUser;
     }
 
     public int getId() {
@@ -100,18 +104,32 @@ public class User {
         this.foto = foto;
     }
 
+    public Set<Message> getMessage() {
+        return message;
+    }
+
+    public void setMessage(Set<Message> message) {
+        this.message = message;
+    }
+
+    public RoleUser getRoleUser() {
+        return roleUser;
+    }
+
+    public void setRoleUser(RoleUser roleUser) {
+        this.roleUser = roleUser;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User user)) return false;
-        return getId() == user.getId() && Objects.equals(getName(), user.getName()) && Objects.equals(getPassword(), user.getPassword()) && Objects.equals(getEmail(), user.getEmail()) && Objects.equals(getNickname(), user.getNickname()) && Objects.equals(getStatus(), user.getStatus()) && Objects.equals(getDate(), user.getDate()) && Objects.equals(getFoto(), user.getFoto());
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id && Objects.equals(name, user.name) && Objects.equals(password, user.password) && Objects.equals(email, user.email) && Objects.equals(nickname, user.nickname) && Objects.equals(status, user.status) && Objects.equals(date, user.date) && Objects.equals(foto, user.foto) && Objects.equals(message, user.message) && roleUser == user.roleUser;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getPassword(), getEmail(), getNickname(), getStatus(), getDate(), getFoto());
+        return Objects.hash(id, name, password, email, nickname, status, date, foto, message, roleUser);
     }
-
-
-
 }

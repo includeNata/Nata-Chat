@@ -9,8 +9,8 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
-@CrossOrigin(origins = "http://localhost:8080")
 @RequestMapping(value = "/user")
 public class UserController {
     @Autowired
@@ -21,7 +21,7 @@ public class UserController {
         return userServices.findAll();
     }
 
-    @PostMapping("/{id}")
+    @GetMapping("/{id}")
     public User findById (@PathVariable Integer id){
         return userServices.findById(id);
     }
